@@ -1,0 +1,113 @@
+.menu {
+  height: 100vh;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+/* Left navigation */
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: var(--space-16);
+  border-right: 1px solid var(--color-border);
+}
+
+.sectionLabel {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-10);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.categoryLabel {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-light);
+  color: var(--color-text-primary);
+  opacity: 0.2;
+  display: block;
+  transition: opacity var(--duration-base) var(--ease-out-expo);
+}
+
+/* Right panels */
+.panels {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: var(--space-16);
+}
+
+.panel {
+  position: absolute;
+  width: 100%;
+}
+
+/* First panel starts visible */
+.panel:first-child {
+  position: relative;
+}
+
+.items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.itemMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.itemName {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-light);
+  color: var(--color-text-primary);
+}
+
+.itemDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  letter-spacing: var(--tracking-wide);
+}
+
+.itemPrice {
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}

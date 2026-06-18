@@ -1,0 +1,83 @@
+.cta {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-bg);
+  padding-top: var(--space-40);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-8);
+}
+
+.heading {
+  font-size: clamp(var(--text-5xl), 8vw, var(--text-9xl));
+  font-weight: var(--weight-light);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--color-text-primary);
+  line-height: 0.95;
+  max-width: 15ch;
+}
+
+.subheading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(var(--text-lg), 2vw, var(--text-2xl));
+  color: var(--color-text-secondary);
+  font-weight: var(--weight-light);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.buttonPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-8);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  transition:
+    background var(--duration-fast) var(--ease-out-expo),
+    transform var(--duration-fast) var(--ease-out-expo);
+}
+
+.buttonPrimary:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+.buttonSecondary {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2px;
+  transition: color var(--duration-fast) var(--ease-out-expo);
+}
+
+.buttonSecondary:hover {
+  color: var(--color-text-primary);
+}
+
+.footer {
+  padding: var(--space-8) var(--container-pad);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+}

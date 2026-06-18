@@ -1,0 +1,47 @@
+.about {
+  padding-block: var(--space-40);
+  background: var(--color-bg);
+}
+
+.inner {
+  max-width: 900px;
+}
+
+.label {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-8);
+}
+
+.heading {
+  font-size: clamp(var(--text-4xl), 6vw, var(--text-7xl));
+  font-weight: var(--weight-light);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-12);
+  overflow: hidden;
+}
+
+/* Word-mask reveal */
+.wordOuter {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.wordInner {
+  display: inline-block;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 600px;
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-loose);
+}
