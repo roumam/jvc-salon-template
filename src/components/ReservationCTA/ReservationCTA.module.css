@@ -19,8 +19,9 @@
   font-weight: var(--weight-light);
   letter-spacing: var(--tracking-tighter);
   color: var(--color-text-primary);
-  line-height: 0.95;
+  line-height: 1.0;
   max-width: 15ch;
+  padding-bottom: 0.1em;
 }
 
 .subheading {
