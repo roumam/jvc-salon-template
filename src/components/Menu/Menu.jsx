@@ -46,10 +46,13 @@ export default function Menu() {
       },
     })
 
-    // Each category: 0.3 units to slide in, then hold until next segment
+    // Each category: slide previous out upward, new one in from below simultaneously
     for (let i = 1; i < TOTAL; i++) {
-      tl.to(panels[i], { yPercent: 0, opacity: 1, ease: 'power2.inOut', duration: 0.3 }, i - 1)
-      tl.to(labels[i], { opacity: 1, ease: 'none', duration: 0.3 }, i - 1)
+      const at = i - 1
+      tl.to(panels[i - 1], { yPercent: -100, opacity: 0, ease: 'power2.inOut', duration: 0.3 }, at)
+      tl.to(panels[i],     { yPercent: 0,    opacity: 1, ease: 'power2.inOut', duration: 0.3 }, at)
+      tl.to(labels[i - 1], { opacity: 0.2, ease: 'none', duration: 0.3 }, at)
+      tl.to(labels[i],     { opacity: 1,   ease: 'none', duration: 0.3 }, at)
     }
   })
 
