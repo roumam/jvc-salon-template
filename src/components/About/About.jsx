@@ -33,13 +33,13 @@ export default function About() {
       {
         yPercent: 0,
         opacity: 1,
-        stagger: 0.035,
+        stagger: 0.06,
+        duration: 0.9,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: rootRef.current,
-          start: 'top 75%',
-          end: 'center 65%',
-          scrub: 0.8,
+          start: 'top 70%',
+          toggleActions: 'play none none none',
         },
       }
     )
