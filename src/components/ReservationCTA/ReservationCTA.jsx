@@ -2,7 +2,7 @@ import { useGSAP } from '@/hooks/useGSAP'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './ReservationCTA.module.css'
-import { reservation } from '@/data/content'
+import { booking } from '@/data/content'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -42,29 +42,29 @@ export default function ReservationCTA() {
     <section ref={rootRef} className={styles.cta}>
       <div className="container">
         <div className={styles.inner}>
-          <h2 className={styles.heading}>{reservation.heading}</h2>
-          <p className={styles.subheading}>{reservation.subheading}</p>
+          <h2 className={styles.heading}>{booking.heading}</h2>
+          <p className={styles.subheading}>{booking.subheading}</p>
 
           <div className={styles.actions}>
             <a
-              href={`mailto:${reservation.email}`}
+              href={`https://wa.me/${booking.whatsapp}`}
               className={styles.buttonPrimary}
             >
-              {reservation.cta}
+              {booking.cta}
             </a>
 
             <a
-              href={`tel:${reservation.phone.replace(/\s/g, '')}`}
+              href={`tel:${booking.phone.replace(/\s/g, '')}`}
               className={styles.buttonSecondary}
             >
-              {reservation.phone}
+              {booking.phone}
             </a>
           </div>
+          </div>
         </div>
-      </div>
 
       <footer className={styles.footer}>
-        <p>© 2025 Caprista — alle Rechte vorbehalten.</p>
+        <p>© 2026 Barbers Gents Salon — All rights reserved.</p>
       </footer>
     </section>
   )

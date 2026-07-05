@@ -49,7 +49,7 @@ export default function About() {
     <section ref={rootRef} className={styles.about}>
       <div className="container">
         <div className={styles.inner}>
-          <p className={styles.label}>Über uns</p>
+          <p className={styles.label}>About Us</p>
 
           <h2 className={styles.heading}>{splitWords(about.heading)}</h2>
 

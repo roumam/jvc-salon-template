@@ -1,82 +1,91 @@
-// ─────────────────────────────────────────────
-// Caprista — Köln
-// ─────────────────────────────────────────────
+import img7804 from '../assets/IMG_7804.jpg'
+import img7805 from '../assets/IMG_7805.jpg'
+import img7806 from '../assets/IMG_7806.jpg'
+import img7807 from '../assets/IMG_7807.jpg'
+import img7808 from '../assets/IMG_7808.jpg'
 
-export const restaurant = {
-  name:        'Caprista',
-  tagline:     'Dolce Vita, serviert.',
-  description: 'Gegründet mit dem Traum, ein Stück Capri nach Köln zu bringen. Bio-Eier, frische Zutaten, mediterrane Eleganz — jeden Tag, den ganzen Tag.',
-  eyebrow:     'Köln · Ehrenfeld & Belgisches Viertel',
+// ─────────────────────────────────────────
+// Barbers Gents Salon — JVC, Dubai
+// ─────────────────────────────────────────
+
+export const salon = {
+  name:        'Barbers Gents Salon',
+  tagline:     'Sharp Cuts. Clean Lines.',
+  description: 'Precision cuts and expert grooming in the heart of JVC, Dubai.',
+  eyebrow:     'Dubai · Jumeirah Village Circle',
 }
 
 export const about = {
-  heading: 'Ein Stück Capri',
+  heading: 'Crafted for the modern gentleman.',
   body: [
-    'Gegründet mit dem Traum, ein Stück Capri nach Köln zu bringen — mit Zitronenbäumen, Meerluft und dem Gefühl, dass der Tag immer ein bisschen länger dauern darf.',
-    'Bio-Eier, frische Zutaten, mediterrane Eleganz — jeden Tag, den ganzen Tag.',
+    'At Barbers Gents Salon, every visit is a ritual. Nestled in the Summer Cluster of JVC, we combine old-school barbering tradition with a sharp, contemporary approach — delivering precision fades, clean shaves, and confident results.',
+    'From quick machine cuts to full colour treatments, our team handles it all with the same attention to detail. No rush. No shortcuts. Just a cut worth coming back for.',
   ],
 }
 
-export const menuCategories = [
+export const services = [
   {
-    id: 'vorspeisen',
-    label: 'Vorspeisen',
+    id: 'haircut',
+    label: 'Haircut',
     items: [
-      { name: 'Eggs Benedict',    description: 'Hollandaise, Räucherlachs, Brioche',      price: 'ab 13,90' },
-      { name: 'Smashed Burrata',  description: 'Kirschtomaten, Basilikumöl, Fleur de Sel', price: '13,50'   },
-      { name: 'Avocado Amore',    description: 'Sojasauce, Sesam, Microgreens, Limette',   price: '12,50'   },
+      { name: 'Adult Haircut',  description: 'Full cut and style, scissor finish', price: 'AED 70' },
+      { name: 'Kids Haircut',   description: 'For the young gents',                price: 'AED 50' },
+      { name: 'Machine Cut',    description: 'Clean all-over machine finish',       price: 'AED 60' },
     ],
   },
   {
-    id: 'hauptgaenge',
-    label: 'Hauptgänge',
+    id: 'beard',
+    label: 'Beard',
     items: [
-      { name: 'Pancakes',     description: 'Ahornsirup, frische Beeren, Mascarpone',    price: 'ab 11,90' },
-      { name: 'Veggie Max',   description: 'Gegrilltes Gemüse, Pesto, Ciabatta',        price: '11,50'    },
-      { name: 'Strammer Max', description: 'Bauernbrot, Spiegelei, Serrano, Schnittlauch', price: 'ab 10,90' },
+      { name: 'Beard Shave',    description: 'Hot towel shave, razor finish',   price: 'AED 50' },
+      { name: 'Machine Shave',  description: 'Precise machine beard trim',      price: 'AED 40' },
     ],
   },
   {
-    id: 'desserts',
-    label: 'Desserts',
+    id: 'color-keratin',
+    label: 'Color & Keratin',
     items: [
-      { name: 'Cornetto Pistacchio', description: 'Sizilianische Pistaziencreme',        price: '4,50'  },
-      { name: 'Zitronensorbet',      description: 'Amalfi-Zitrone, frische Minze',       price: '5,90'  },
-      { name: 'Berry Matcha Bowl',   description: 'Matcha-Creme, Erdbeeren, Granola',    price: '10,50' },
+      { name: 'Hair Dye',          description: 'Full hair colour treatment',          price: 'AED 100' },
+      { name: 'Highlights',        description: 'Partial or full highlights',           price: 'AED 150' },
+      { name: 'Beard Dye',         description: 'Colour treatment for beard',           price: 'AED 40'  },
+      { name: 'Keratin — Short',   description: 'Smoothing treatment, short hair',      price: 'AED 300' },
+      { name: 'Keratin — Long',    description: 'Smoothing treatment, long hair',       price: 'AED 500' },
+    ],
+  },
+  {
+    id: 'extras',
+    label: 'Extras',
+    items: [
+      { name: 'Waxing — Full Face',    description: 'Complete facial waxing',                price: 'AED 20' },
+      { name: 'Threading — Full Face', description: 'Full face threading',                    price: 'AED 20' },
+      { name: 'Blow Dry',              description: 'Finish with a professional blow dry',     price: 'AED 45' },
+      { name: 'Oil Bath',              description: 'Nourishing scalp oil treatment',          price: 'AED 50' },
     ],
   },
 ]
 
 export const gallery = [
-  { src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800', alt: 'Café-Atmosphäre am Morgen'       },
-  { src: 'https://images.unsplash.com/photo-1533920379810-6bedac961555?q=80&w=800', alt: 'Handgemachter Cappuccino'         },
-  { src: 'https://images.unsplash.com/photo-1623428187969-5da0c1c5a0c4?q=80&w=800', alt: 'Pistazieneis Cornetto'            },
-  { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800', alt: 'Frühstücksklassiker'              },
-  { src: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800', alt: 'Mediterrane Tischdekoration'      },
-  { src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800', alt: 'Frische Zutaten vom Wochenmarkt'  },
+  { src: img7804, alt: 'Fade Haircut with Beard Trim' },
+  { src: img7805, alt: 'Man Bun with Undercut Fade' },
+  { src: img7806, alt: 'Short Fade — Clean Finish' },
+  { src: img7807, alt: 'High Fade with Sculpted Beard' },
+  { src: img7808, alt: 'Man Bun with Full Beard' },
 ]
 
 export const locations = [
   {
-    id: 'ehrenfeld',
-    name: 'Ehrenfeld',
-    address: 'Venloer Str. 380, 50825 Köln',
-    hours: 'Täglich 9:00–18:00',
-    phone: '+49 221 168 420 00',
-  },
-  {
-    id: 'belgisches-viertel',
-    name: 'Belgisches Viertel',
-    address: 'Flandrische Str. 15, 50672 Köln',
-    hours: 'Täglich 9:00–18:00',
-    phone: '+49 221 168 420 01',
+    id: 'jvc',
+    name: 'Jumeirah Village Circle',
+    address: 'Summer Cluster, JVC, Dubai',
+    hours: 'Daily 10:00 – 23:00',
+    phone: '+971 56 137 9841',
   },
 ]
 
-export const reservation = {
-  heading:    'Komm vorbei.',
-  subheading: 'Kein Dresscode. Kein Stress. Nur gutes Essen.',
-  cta:        'Tisch reservieren',
-  phone:      '+49 221 168 420 00',
-  email:      'ciao@caprista.de',
+export const booking = {
+  heading:    'Your next cut, one message away.',
+  subheading: 'No queue. No phone call needed.',
+  cta:        'Book via WhatsApp',
+  whatsapp:   '971561379841',
+  phone:      '+971 56 137 9841',
 }

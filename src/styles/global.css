@@ -80,6 +80,19 @@ button {
   padding-inline: var(--container-pad);
 }
 
+/* Film grain overlay — fixed, pointer-events off, z above content */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-overlay);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.045;
+  mix-blend-mode: soft-light;
+}
+
 /* Visually hidden (accessibility) */
 .sr-only {
   position: absolute;

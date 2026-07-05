@@ -12,8 +12,8 @@
   --color-text-secondary: rgba(245, 239, 224, 0.55);
   --color-text-muted:     rgba(245, 239, 224, 0.30);
 
-  --color-accent:      #d4a843;   /* citrus gold */
-  --color-accent-dark: #b8912e;
+  --color-accent:      #c4a26a;   /* champagne gold */
+  --color-accent-dark: #a8895a;
 
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -94,4 +94,40 @@
   --z-overlay:  200;
   --z-modal:    300;
   --z-nav:      400;
+}
+
+/* ── Theme: barber (default dark gold — same as :root) ── */
+[data-theme="barber"] {
+  --color-bg:             #1a1612;
+  --color-surface:        #221d16;
+  --color-border:         rgba(212, 168, 67, 0.14);
+  --color-text-primary:   #f5efe0;
+  --color-text-secondary: rgba(245, 239, 224, 0.55);
+  --color-text-muted:     rgba(245, 239, 224, 0.30);
+  --color-accent:         #c4a26a;
+  --color-accent-dark:    #a8895a;
+}
+
+/* ── Theme: beauty (light, rosé) ── */
+[data-theme="beauty"] {
+  --color-bg:             #faf7f4;
+  --color-surface:        #f0eae3;
+  --color-border:         rgba(180, 100, 120, 0.15);
+  --color-text-primary:   #2a1f1a;
+  --color-text-secondary: rgba(42, 31, 26, 0.55);
+  --color-text-muted:     rgba(42, 31, 26, 0.35);
+  --color-accent:         #c97d8a;
+  --color-accent-dark:    #a85f6e;
+}
+
+/* ── Theme: luxe (cold dark, platinum) ── */
+[data-theme="luxe"] {
+  --color-bg:             #0d0d0f;
+  --color-surface:        #141418;
+  --color-border:         rgba(168, 168, 184, 0.14);
+  --color-text-primary:   #e8e8f0;
+  --color-text-secondary: rgba(232, 232, 240, 0.55);
+  --color-text-muted:     rgba(232, 232, 240, 0.30);
+  --color-accent:         #a8a8b8;
+  --color-accent-dark:    #8888a0;
 }

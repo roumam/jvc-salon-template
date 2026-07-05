@@ -2,12 +2,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@/hooks/useGSAP'
 import styles from './HeroParallax.module.css'
-import { restaurant, reservation } from '@/data/content'
+import { salon, booking } from '@/data/content'
+import HERO_IMG from '../../assets/Hero.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const HERO_IMG =
-  'https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1600&auto=format&fit=crop'
 
 export default function HeroParallax() {
   const rootRef = useGSAP((ctx) => {
@@ -77,7 +76,7 @@ export default function HeroParallax() {
       <div className={styles.imgWrapper}>
         <img
           src={HERO_IMG}
-          alt="Caprista Café Köln"
+          alt="Barbers Gents Salon — JVC Dubai"
           className={styles.img}
         />
         <div className={styles.vignette} />
@@ -85,16 +84,16 @@ export default function HeroParallax() {
 
       {/* ── Content ────────────────────────────── */}
       <div className={styles.content}>
-        <p className={styles.eyebrow}>{restaurant.eyebrow}</p>
+        <p className={styles.eyebrow}>{salon.eyebrow}</p>
 
         <h1 className={styles.headline}>
-          {restaurant.name}
+          {salon.name}
         </h1>
 
-        <p className={styles.sub}>{restaurant.description}</p>
+        <p className={styles.sub}>{salon.description}</p>
 
-        <a href="#reservierung" className={styles.cta}>
-          <span>{reservation.cta}</span>
+        <a href="#booking" className={styles.cta}>
+          <span>{booking.cta}</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5"
               strokeLinecap="round" strokeLinejoin="round" />

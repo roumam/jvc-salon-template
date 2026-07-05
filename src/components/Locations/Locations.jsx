@@ -35,8 +35,8 @@ export default function Locations() {
     <section ref={rootRef} className={styles.locations}>
       <div className="container">
         <header className={styles.header}>
-          <p className={styles.label}>Standorte</p>
-          <h2 className={styles.heading}>Wo Sie uns finden.</h2>
+          <p className={styles.label}>Locations</p>
+          <h2 className={styles.heading}>Find us.</h2>
         </header>
 
         <ul className={styles.grid}>
@@ -48,11 +48,11 @@ export default function Locations() {
               </address>
               <dl className={styles.cardDetails}>
                 <div>
-                  <dt>Öffnungszeiten</dt>
+                  <dt>Opening Hours</dt>
                   <dd>{loc.hours}</dd>
                 </div>
                 <div>
-                  <dt>Telefon</dt>
+                  <dt>Phone</dt>
                   <dd>
                     <a href={`tel:${loc.phone.replace(/\s/g, '')}`}>{loc.phone}</a>
                   </dd>
@@ -61,6 +61,15 @@ export default function Locations() {
             </li>
           ))}
         </ul>
+
+        <div className={styles.map}>
+          <iframe
+            title="Barbers Gents Salon — Location"
+            src="https://maps.google.com/maps?q=25.0606068,55.2017154&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </div>
     </section>
   )
