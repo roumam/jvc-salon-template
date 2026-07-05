@@ -11,6 +11,11 @@
   gap: var(--space-6);
   padding-inline: var(--container-pad);
   will-change: transform;
+
+  @media (max-width: 768px) {
+    gap: var(--space-3);
+    padding-inline: var(--space-4);
+  }
 }
 
 .figure {
@@ -24,11 +29,21 @@
 .figure:nth-child(odd) {
   width: clamp(300px, 35vw, 560px);
   height: 70vh;
+
+  @media (max-width: 768px) {
+    width: 78vw;
+    height: 52vh;
+  }
 }
 
 .figure:nth-child(even) {
   width: clamp(240px, 28vw, 440px);
   height: 55vh;
+
+  @media (max-width: 768px) {
+    width: 65vw;
+    height: 42vh;
+  }
 }
 
 .image {
