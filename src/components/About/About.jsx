@@ -38,7 +38,7 @@ export default function About() {
         scrollTrigger: {
           trigger: rootRef.current,
           start: 'top 75%',
-          end: 'bottom 40%',
+          end: 'center 30%',
           scrub: 0.8,
         },
       }
