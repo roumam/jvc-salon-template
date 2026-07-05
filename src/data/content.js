@@ -88,4 +88,5 @@ export const booking = {
   cta:        'Book via WhatsApp',
   whatsapp:   '971563582510',
   phone:      '+971 56 358 2510',
+  instagram:  'elitecirclegentssalon',
 }
