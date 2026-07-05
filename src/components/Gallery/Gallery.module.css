@@ -2,12 +2,6 @@
   height: 100vh;
   overflow: hidden;
   background: var(--color-bg);
-
-  @media (max-width: 768px) {
-    height: auto;
-    overflow: visible;
-    padding-block: var(--space-12);
-  }
 }
 
 .strip {
@@ -19,9 +13,7 @@
   will-change: transform;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    height: auto;
-    gap: var(--space-4);
+    gap: var(--space-3);
     padding-inline: var(--space-4);
   }
 }
@@ -39,8 +31,8 @@
   height: 70vh;
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 56vw;
+    width: 78vw;
+    height: 52vh;
   }
 }
 
@@ -49,8 +41,8 @@
   height: 55vh;
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 56vw;
+    width: 65vw;
+    height: 42vh;
   }
 }
 
