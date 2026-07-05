@@ -25,11 +25,13 @@ export default function Menu() {
     const mm = gsap.matchMedia()
 
     mm.add('(min-width: 769px)', () => {
+      const SPEED = 1.2 // scroll distance per category (in vh units)
+
       // Pin the wrapper for the full scroll distance
       ScrollTrigger.create({
         trigger: rootRef.current,
         start: 'top top',
-        end: () => `+=${window.innerHeight * (TOTAL - 1) * 0.65}`,
+        end: () => `+=${window.innerHeight * (TOTAL - 1) * SPEED}`,
         pin: true,
         pinSpacing: true,
       })
@@ -49,8 +51,8 @@ export default function Menu() {
             ease: 'none',
             scrollTrigger: {
               trigger: rootRef.current,
-              start: () => `top+=${window.innerHeight * (i - 0.5) * 0.65} top`,
-              end:   () => `top+=${window.innerHeight * i * 0.65} top`,
+              start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
+              end:   () => `top+=${window.innerHeight * i * SPEED} top`,
               scrub: true,
             },
           }
@@ -68,8 +70,8 @@ export default function Menu() {
             ease: 'none',
             scrollTrigger: {
               trigger: rootRef.current,
-              start: () => `top+=${window.innerHeight * (i - 0.5) * 0.65} top`,
-              end:   () => `top+=${window.innerHeight * i * 0.65} top`,
+              start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
+              end:   () => `top+=${window.innerHeight * i * SPEED} top`,
               scrub: true,
             },
           }
