@@ -5,20 +5,20 @@ import img7807 from '../assets/IMG_7807.jpg'
 import img7808 from '../assets/IMG_7808.jpg'
 
 // ─────────────────────────────────────────
-// Barbers Gents Salon — JVC, Dubai
+// WHITE-LABEL DEMO — JVC, Dubai
 // ─────────────────────────────────────────
 
 export const salon = {
-  name:        'Barbers Gents Salon',
+  name:        'Your Salon Name',
   tagline:     'Sharp Cuts. Clean Lines.',
-  description: 'Precision cuts and expert grooming in the heart of JVC, Dubai.',
+  description: 'Premium grooming in the heart of JVC, Dubai.',
   eyebrow:     'Dubai · Jumeirah Village Circle',
 }
 
 export const about = {
   heading: 'Crafted for the modern gentleman.',
   body: [
-    'At Barbers Gents Salon, every visit is a ritual. Nestled in the Summer Cluster of JVC, we combine old-school barbering tradition with a sharp, contemporary approach — delivering precision fades, clean shaves, and confident results.',
+    'Every visit is a ritual. Right here in JVC, we combine traditional barbering with a sharp, contemporary approach — delivering precision fades, clean shaves, and confident results.',
     'From quick machine cuts to full colour treatments, our team handles it all with the same attention to detail. No rush. No shortcuts. Just a cut worth coming back for.',
   ],
 }
@@ -76,9 +76,9 @@ export const locations = [
   {
     id: 'jvc',
     name: 'Jumeirah Village Circle',
-    address: 'Summer Cluster, JVC, Dubai',
+    address: 'JVC, Dubai',
     hours: 'Daily 10:00 – 23:00',
-    phone: '+971 56 137 9841',
+    phone: '+971 XX XXX XXXX',
   },
 ]
 
@@ -86,6 +86,6 @@ export const booking = {
   heading:    'Your next cut, one message away.',
   subheading: 'No queue. No phone call needed.',
   cta:        'Book via WhatsApp',
-  whatsapp:   '971561379841',
-  phone:      '+971 56 137 9841',
+  whatsapp:   '971000000000',
+  phone:      '+971 XX XXX XXXX',
 }
