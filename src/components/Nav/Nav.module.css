@@ -31,10 +31,8 @@
   height: 32px;
 }
 
-/* invert: black logo → white; screen: removes the inverted black bg */
 .logo img {
-  filter: invert(1);
-  mix-blend-mode: screen;
+  display: block;
 }
 
 /* Shown when no logo image is provided */
