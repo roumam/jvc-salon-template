@@ -5,20 +5,20 @@ import img7807 from '../assets/IMG_7807.jpg'
 import img7808 from '../assets/IMG_7808.jpg'
 
 // ─────────────────────────────────────────
-// WHITE-LABEL DEMO — JVC, Dubai
+// Dimassi Gents Salon — JVC, Dubai
 // ─────────────────────────────────────────
 
 export const salon = {
-  name:        'Your Salon Name',
+  name:        'Dimassi Gents Salon',
   tagline:     'Sharp Cuts. Clean Lines.',
-  description: 'Premium grooming in the heart of JVC, Dubai.',
+  description: 'Precision cuts and expert grooming in the heart of JVC, Dubai.',
   eyebrow:     'Dubai · Jumeirah Village Circle',
 }
 
 export const about = {
   heading: 'Crafted for the modern gentleman.',
   body: [
-    'Every visit is a ritual. Right here in JVC, we combine traditional barbering with a sharp, contemporary approach — delivering precision fades, clean shaves, and confident results.',
+    'At Dimassi Gents Salon, every visit is a ritual. Right here at Aurion Tower in JVC, we combine traditional barbering with a sharp, contemporary approach — delivering precision fades, clean shaves, and confident results.',
     'From quick machine cuts to full colour treatments, our team handles it all with the same attention to detail. No rush. No shortcuts. Just a cut worth coming back for.',
   ],
 }
@@ -56,10 +56,10 @@ export const services = [
     id: 'extras',
     label: 'Extras',
     items: [
-      { name: 'Waxing — Full Face',    description: 'Complete facial waxing',                price: 'AED 20' },
-      { name: 'Threading — Full Face', description: 'Full face threading',                    price: 'AED 20' },
-      { name: 'Blow Dry',              description: 'Finish with a professional blow dry',     price: 'AED 45' },
-      { name: 'Oil Bath',              description: 'Nourishing scalp oil treatment',          price: 'AED 50' },
+      { name: 'Waxing — Full Face',    description: 'Complete facial waxing',             price: 'AED 20' },
+      { name: 'Threading — Full Face', description: 'Full face threading',                price: 'AED 20' },
+      { name: 'Blow Dry',              description: 'Finish with a professional blow dry', price: 'AED 45' },
+      { name: 'Oil Bath',              description: 'Nourishing scalp oil treatment',      price: 'AED 50' },
     ],
   },
 ]
@@ -76,9 +76,9 @@ export const locations = [
   {
     id: 'jvc',
     name: 'Jumeirah Village Circle',
-    address: 'JVC, Dubai',
+    address: 'Aurion Tower, JVC, Dubai',
     hours: 'Daily 10:00 – 23:00',
-    phone: '+971 XX XXX XXXX',
+    phone: '+971 52 230 9207',
   },
 ]
 
@@ -86,6 +86,6 @@ export const booking = {
   heading:    'Your next cut, one message away.',
   subheading: 'No queue. No phone call needed.',
   cta:        'Book via WhatsApp',
-  whatsapp:   '971000000000',
-  phone:      '+971 XX XXX XXXX',
+  whatsapp:   '971522309207',
+  phone:      '+971 52 230 9207',
 }
