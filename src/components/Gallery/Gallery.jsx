@@ -18,6 +18,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Gallery() {
   const rootRef = useGSAP((ctx) => {
+    if (window.innerWidth <= 768) return
+
     const strip = ctx.selector(`.${styles.strip}`)[0]
     if (!strip) return
 
