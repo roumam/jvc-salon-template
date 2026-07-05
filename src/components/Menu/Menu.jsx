@@ -22,66 +22,63 @@ export default function Menu() {
     const labels   = ctx.selector(`.${styles.categoryLabel}`)
     const TOTAL    = services.length
 
-    const mm = gsap.matchMedia()
+    const SPEED  = 1.2
+    const mobile = window.innerWidth <= 768
 
-    mm.add('(min-width: 769px)', () => {
-      const SPEED = 1.2 // scroll distance per category (in vh units)
+    if (mobile) {
+      gsap.set(labels, { opacity: 1 })
+      return
+    }
 
-      // Pin the wrapper for the full scroll distance
-      ScrollTrigger.create({
-        trigger: rootRef.current,
-        start: 'top top',
-        end: () => `+=${window.innerHeight * (TOTAL - 1) * SPEED}`,
-        pin: true,
-        pinSpacing: true,
-      })
-
-      // First label always visible
-      gsap.set(labels[0], { opacity: 1 })
-
-      // Scrub through each panel
-      panels.forEach((panel, i) => {
-        if (i === 0) return
-        gsap.fromTo(
-          panel,
-          { yPercent: 100, opacity: 0 },
-          {
-            yPercent: 0,
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: rootRef.current,
-              start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
-              end:   () => `top+=${window.innerHeight * i * SPEED} top`,
-              scrub: true,
-            },
-          }
-        )
-      })
-
-      // Fade category labels
-      labels.forEach((label, i) => {
-        if (i === 0) return
-        gsap.fromTo(
-          label,
-          { opacity: 0.2 },
-          {
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: rootRef.current,
-              start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
-              end:   () => `top+=${window.innerHeight * i * SPEED} top`,
-              scrub: true,
-            },
-          }
-        )
-      })
+    // Pin the wrapper for the full scroll distance
+    ScrollTrigger.create({
+      trigger: rootRef.current,
+      start: 'top top',
+      end: () => `+=${window.innerHeight * (TOTAL - 1) * SPEED}`,
+      pin: true,
+      pinSpacing: true,
     })
 
-    mm.add('(max-width: 768px)', () => {
-      // On mobile: show all labels at full opacity, no pinning
-      gsap.set(labels, { opacity: 1 })
+    // First label always visible
+    gsap.set(labels[0], { opacity: 1 })
+
+    // Scrub through each panel
+    panels.forEach((panel, i) => {
+      if (i === 0) return
+      gsap.fromTo(
+        panel,
+        { yPercent: 100, opacity: 0 },
+        {
+          yPercent: 0,
+          opacity: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: rootRef.current,
+            start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
+            end:   () => `top+=${window.innerHeight * i * SPEED} top`,
+            scrub: true,
+          },
+        }
+      )
+    })
+
+    // Fade category labels
+    labels.forEach((label, i) => {
+      if (i === 0) return
+      gsap.fromTo(
+        label,
+        { opacity: 0.2 },
+        {
+          opacity: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: rootRef.current,
+            start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
+            end:   () => `top+=${window.innerHeight * i * SPEED} top`,
+            scrub: true,
+          },
+        }
+      )
     })
   })
 
