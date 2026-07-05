@@ -88,4 +88,5 @@ export const booking = {
   cta:        'Book via WhatsApp',
   whatsapp:   '971522309207',
   phone:      '+971 52 230 9207',
+  instagram:  'dimassi_gents_salon',
 }
