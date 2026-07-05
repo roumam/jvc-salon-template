@@ -2,6 +2,12 @@
   height: 100vh;
   overflow: hidden;
   background: var(--color-bg);
+
+  @media (max-width: 768px) {
+    height: auto;
+    overflow: visible;
+    padding-block: var(--space-12);
+  }
 }
 
 .strip {
@@ -11,6 +17,13 @@
   gap: var(--space-6);
   padding-inline: var(--container-pad);
   will-change: transform;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    gap: var(--space-4);
+    padding-inline: var(--space-4);
+  }
 }
 
 .figure {
@@ -24,11 +37,21 @@
 .figure:nth-child(odd) {
   width: clamp(300px, 35vw, 560px);
   height: 70vh;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 56vw;
+  }
 }
 
 .figure:nth-child(even) {
   width: clamp(240px, 28vw, 440px);
   height: 55vh;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 56vw;
+  }
 }
 
 .image {
