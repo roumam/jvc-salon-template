@@ -9,6 +9,7 @@ import Gallery from '@/components/Gallery/Gallery'
 import Locations from '@/components/Locations/Locations'
 import ReservationCTA from '@/components/ReservationCTA/ReservationCTA'
 import Nav from '@/components/Nav/Nav'
+import FloatingContact from '@/components/FloatingContact/FloatingContact'
 
 export default function App() {
   useLenis()
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <>
       <Nav />
+      <FloatingContact />
       <main>
       <HeroParallax />
       <About />

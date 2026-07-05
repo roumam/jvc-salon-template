@@ -88,4 +88,5 @@ export const booking = {
   cta:        'Book via WhatsApp',
   whatsapp:   '971000000000',
   phone:      '+971 XX XXX XXXX',
+  instagram:  '',
 }
