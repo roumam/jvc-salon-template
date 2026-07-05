@@ -22,64 +22,35 @@ export default function Menu() {
     const labels   = ctx.selector(`.${styles.categoryLabel}`)
     const TOTAL    = services.length
 
-    const SPEED  = 1.2
-    const mobile = window.innerWidth <= 768
+    const SPEED = 1.2
 
-    if (mobile) {
+    if (window.innerWidth <= 768) {
       gsap.set(labels, { opacity: 1 })
       return
     }
 
-    // Pin the wrapper for the full scroll distance
-    ScrollTrigger.create({
-      trigger: rootRef.current,
-      start: 'top top',
-      end: () => `+=${window.innerHeight * (TOTAL - 1) * SPEED}`,
-      pin: true,
-      pinSpacing: true,
+    // Set initial states
+    gsap.set(labels[0],       { opacity: 1 })
+    gsap.set(labels.slice(1), { opacity: 0.2 })
+    gsap.set(panels.slice(1), { yPercent: 100, opacity: 0 })
+
+    // Single timeline — pin + scrub in one ScrollTrigger
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: rootRef.current,
+        start: 'top top',
+        end: () => `+=${window.innerHeight * (TOTAL - 1) * SPEED}`,
+        scrub: 1,
+        pin: true,
+        pinSpacing: true,
+      },
     })
 
-    // First label always visible
-    gsap.set(labels[0], { opacity: 1 })
-
-    // Scrub through each panel
-    panels.forEach((panel, i) => {
-      if (i === 0) return
-      gsap.fromTo(
-        panel,
-        { yPercent: 100, opacity: 0 },
-        {
-          yPercent: 0,
-          opacity: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: rootRef.current,
-            start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
-            end:   () => `top+=${window.innerHeight * i * SPEED} top`,
-            scrub: true,
-          },
-        }
-      )
-    })
-
-    // Fade category labels
-    labels.forEach((label, i) => {
-      if (i === 0) return
-      gsap.fromTo(
-        label,
-        { opacity: 0.2 },
-        {
-          opacity: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: rootRef.current,
-            start: () => `top+=${window.innerHeight * (i - 0.5) * SPEED} top`,
-            end:   () => `top+=${window.innerHeight * i * SPEED} top`,
-            scrub: true,
-          },
-        }
-      )
-    })
+    // Each category: 0.3 units to slide in, then hold until next segment
+    for (let i = 1; i < TOTAL; i++) {
+      tl.to(panels[i], { yPercent: 0, opacity: 1, ease: 'power2.inOut', duration: 0.3 }, i - 1)
+      tl.to(labels[i], { opacity: 1, ease: 'none', duration: 0.3 }, i - 1)
+    }
   })
 
   return (
