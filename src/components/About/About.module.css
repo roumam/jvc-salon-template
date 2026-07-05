@@ -30,8 +30,8 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  padding-bottom: 0.2em;
-  margin-bottom: -0.2em;
+  padding-bottom: 0.35em;
+  margin-bottom: -0.35em;
 }
 
 .wordInner {
