@@ -22,7 +22,6 @@
   letter-spacing: var(--tracking-tight);
   color: var(--color-text-primary);
   margin-bottom: var(--space-12);
-  overflow: hidden;
 }
 
 /* Word-mask reveal */
