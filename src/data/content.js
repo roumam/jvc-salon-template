@@ -88,5 +88,5 @@ export const booking = {
   cta:        'Book via WhatsApp',
   whatsapp:   '971561379841',
   phone:      '+971 56 137 9841',
-  instagram:  '',
+  instagram:  'barbersgentssalon',
 }
